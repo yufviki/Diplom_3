@@ -1,13 +1,16 @@
-package site.nomoreparties.stellarburgers.StellarBurgersTests;
+package site.nomoreparties.stellarburgers.stellarburgerstests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import site.nomoreparties.stellarburgers.StellarBurgersPages.*;
-import site.nomoreparties.stellarburgers.StellarBurgersTests.utils.UserAuthorizationData;
-import site.nomoreparties.stellarburgers.StellarBurgersTests.utils.UserGenerateRegisterData;
+import site.nomoreparties.stellarburgers.stellarburgerstests.utils.UserAuthorizationData;
+import site.nomoreparties.stellarburgers.stellarburgerstests.utils.UserGenerateRegisterData;
+import site.nomoreparties.stellarburgers.pageobjects.Header;
+import site.nomoreparties.stellarburgers.pageobjects.HomePage;
+import site.nomoreparties.stellarburgers.pageobjects.LoginPage;
+import site.nomoreparties.stellarburgers.pageobjects.RegisterPage;
 
 public class RegisterTests extends TestBase {
     Header header;

@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,54 +31,54 @@ public class HomePage {
         this.driver = driver;
     }
 
-    //метод кликает по кнопке "Войти в аккаунт"
+    @Step("Переход по клику на \"Войти в аккаунт\"")
     public void clickButtonLogin() {
         driver.findElement(buttonLogin).click();
     }
 
-    //метод получает текст кнопки "Оформить заказ"
+    @Step("Получение текста кнопки \"Оформить заказ\"")
     public String getTextButtonOrder() {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(buttonOrder));
         return driver.findElement(buttonOrder).getText();
     }
 
-    //метод получает текст заголовка конструктора "Соберите бургер"
+    @Step("Получение текста заголовка страницы конструктора \"Соберите бургер\"")
     public String getTextHeaderConstructor() {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(headerConstructor));
         return driver.findElement(headerConstructor).getText();
     }
 
-    //метод кликает по вкладке конструктора "Булки"
+    @Step("Переход по клику на вкладку конструктора \"Булки\"")
     public void clickTabBun() {
         new WebDriverWait(driver, 3);
         driver.findElement(tabBun).click();
     }
 
-    //метод получает класс активной вкладки конструктора "Булки"
+    @Step("Получение класса активной вкладки конструктора \"Булки\"")
     public String getClassTabBun() {
         return driver.findElement(activeTabBun).getAttribute("class");
     }
 
-    //метод кликает по вкладке конструктора "Соусы"
+    @Step("Переход по клику на вкладку конструктора \"Соусы\"")
     public void clickTabSauce() {
         new WebDriverWait(driver, 3);
         driver.findElement(tabSauce).click();
     }
 
-    //метод получает класс активной вкладки конструктора "Соусы"
+    @Step("Получение класса активной вкладки конструктора \"Соусы\"")
     public String getClassTabSauce() {
         return driver.findElement(activeTabSauce).getAttribute("class");
     }
 
-    //метод кликает по вкладке конструктора "Начинки"
+    @Step("Переход по клику на вкладку конструктора \"Начинки\"")
     public void clickTabTopping() {
         new WebDriverWait(driver, 3);
         driver.findElement(tabTopping).click();
     }
 
-    //метод получает класс активной вкладки конструктора "Начинки"
+    @Step("Получение класса активной вкладки конструктора \"Начинки\"")
     public String getClassTabTopping() {
         return driver.findElement(activeTabTopping).getAttribute("class");
     }

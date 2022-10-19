@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,17 +17,17 @@ public class Header {
         this.driver = driver;
     }
 
-    //метод кликает по логотипу "Stellar Burgers"
+    @Step("Переход по клику на логотип \"Stellar Burgers\"")
     public void clickLogoStellarBurgers() {
         driver.findElement(logoStellarBurgers).click();
     }
 
-    //метод кликает по кнопке "Конструктор"
+    @Step("Переход по клику на \"Конструктор\"")
     public void clickButtonConstructor() {
         driver.findElement(buttonConstructor).click();
     }
 
-    //метод кликает по кнопке "Личный кабинет"
+    @Step("Переход по клику на \"Личный кабинет\"")
     public void clickButtonAccountProfile() {
         driver.findElement(buttonAccountProfile).click();
     }

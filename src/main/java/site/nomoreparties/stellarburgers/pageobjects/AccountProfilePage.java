@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,19 +17,19 @@ public class AccountProfilePage {
         this.driver = driver;
     }
 
-    //метод ожидает текст ссылки "Профиль"
+    @Step("Ожидание пока ссылка \"Профиль\" станет кликабельной")
     public void waitLinkProfile() {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(linkProfile));
     }
 
-    //метод получает текст ссылки "Профиль"
+    @Step("Получение текста ссылки \"Профиль\"")
     public String getLinkProfile() {
         waitLinkProfile();
         return driver.findElement(linkProfile).getText();
     }
 
-    //метод кликает по кнопке "Выйти"
+    @Step("Выход из личного профиля")
     public void clickButtonLogout() {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(buttonLogout));

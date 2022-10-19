@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +13,7 @@ public class ForgotPasswordPage {
         this.driver = driver;
     }
 
-    //метод кликает по ссылке "Войти"
+    @Step("Переход по клику на ссылку \"Войти\"")
     public void clickButtonLogin() {
         driver.findElement(buttonLogin).click();
     }

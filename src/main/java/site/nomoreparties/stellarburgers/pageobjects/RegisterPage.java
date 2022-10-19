@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -22,32 +23,32 @@ public class RegisterPage {
         this.driver = driver;
     }
 
-    //метод заполняет поле ввода "Имя"
+    @Step("Заполнение поля ввода \"Имя\" для страницы регистрации")
     public void setName(String name) {
         driver.findElement(inputName).sendKeys(name);
     }
 
-    //метод заполняет поле ввода "Email"
+    @Step("Заполнение поля ввода \"Email\" для страницы регистрации")
     public void setEmail(String email) {
         driver.findElement(inputEmail).sendKeys(email);
     }
 
-    //метод заполняет поле ввода "Пароль"
+    @Step("Заполнение поля ввода \"Пароль\" для страницы регистрации")
     public void setPassword(String password) {
         driver.findElement(inputPassword).sendKeys(password);
     }
 
-    //метод кликает по кнопке "Зарегистрироваться"
+    @Step("Переход по клику на кнопку \"Зарегистрироваться\" для страницы регистрации")
     public void clickButtonRegister() {
         driver.findElement(buttonRegister).click();
     }
 
-    //метод кликает по ссылке "Войти"
+    @Step("Переход по клику на ссылку \"Войти\" для страницы регистрации")
     public void clickLinkLogin() {
         driver.findElement(linkLogin).click();
     }
 
-    //метод регистрирует пользователя
+    @Step("Регистрация пользователя")
     public void registration(String name, String email, String password) {
         setName(name);
         setEmail(email);
@@ -55,7 +56,7 @@ public class RegisterPage {
         clickButtonRegister();
     }
 
-    //метод отдает текст ошибки поля "Пароль"
+    @Step("Получение текста ошибки валидации поля \"Пароль\"")
     public String getTextErrorInputPassword() {
         return driver.findElement(errorInputPassword).getText();
     }

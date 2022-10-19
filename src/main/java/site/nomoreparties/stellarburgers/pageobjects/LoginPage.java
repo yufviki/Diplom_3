@@ -1,5 +1,6 @@
-package site.nomoreparties.stellarburgers.StellarBurgersPages;
+package site.nomoreparties.stellarburgers.pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,41 +25,41 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    //метод получает текст заголовка "Вход"
+    @Step("Получение текста заголовка страницы логина \"Вход\"")
     public String getTextHeaderLogin() {
         new WebDriverWait(driver, 5)
                 .until(ExpectedConditions.elementToBeClickable(headerLogin));
         return driver.findElement(headerLogin).getText();
     }
 
-    //метод заполняет поле ввода "Email"
+    @Step("Заполнение поля ввода \"Email\" для страницы логина")
     public void setEmail(String email) {
         driver.findElement(inputEmail).sendKeys(email);
     }
 
-    //метод заполняет поле ввода "Пароль"
+    @Step("Заполнение поля ввода \"Пароль\" для страницы логина")
     public void setPassword(String password) {
         driver.findElement(inputPassword).sendKeys(password);
     }
 
-    //метод кликает по кнопке "Войти"
+    @Step("Переход по клику на кнопку \"Войти\" для страницы логина")
     public void clickButtonLogin() {
         driver.findElement(buttonLogin).click();
     }
 
-    //метод авторизовывает пользователя
+    @Step("Авторизация пользователя")
     public void login(String email, String password) {
         setEmail(email);
         setPassword(password);
         clickButtonLogin();
     }
 
-    //метод кликает по ссылке "Зарегистрироваться"
+    @Step("Переход по клику на ссылку \"Зарегистрироваться\" для страницы логина")
     public void clickLinkRegister() {
         driver.findElement(linkRegister).click();
     }
 
-    //метод кликает по ссылке "Восстановить пароль"
+    @Step("Переход по клику на ссылку \"Восстановить пароль\" для страницы логина")
     public void clickLinkForgotPassword() {
         driver.findElement(linkForgotPassword).click();
     }

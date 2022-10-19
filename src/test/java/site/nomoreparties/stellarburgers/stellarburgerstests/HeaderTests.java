@@ -1,15 +1,15 @@
-package site.nomoreparties.stellarburgers.StellarBurgersTests;
+package site.nomoreparties.stellarburgers.stellarburgerstests;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import site.nomoreparties.stellarburgers.StellarBurgersPages.AccountProfilePage;
-import site.nomoreparties.stellarburgers.StellarBurgersPages.Header;
-import site.nomoreparties.stellarburgers.StellarBurgersPages.HomePage;
-import site.nomoreparties.stellarburgers.StellarBurgersPages.LoginPage;
-import site.nomoreparties.stellarburgers.StellarBurgersTests.utils.UserAuthorizationData;
+import site.nomoreparties.stellarburgers.pageobjects.AccountProfilePage;
+import site.nomoreparties.stellarburgers.pageobjects.Header;
+import site.nomoreparties.stellarburgers.pageobjects.HomePage;
+import site.nomoreparties.stellarburgers.pageobjects.LoginPage;
+import site.nomoreparties.stellarburgers.stellarburgerstests.utils.UserAuthorizationData;
 
 public class HeaderTests extends TestBase {
     Header header;
